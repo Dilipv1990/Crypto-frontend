@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg navbar-dark indigo">
+  <a class="navbar-brand" href="#">CryptoCurrecny App</a>
+  <form class="form-inline pull-sm-right pull-xs-left waves-effect waves-light" style='margin-bottom:0;position:absolute;right:20px'>
+
+    <input class="form-control  dropdown-toggle" data-toggle="dropdown" type="text" name="search" id="search" [(ngModel)]="searchtext"
+      placeholder="Search" style="float:right" autocomplete='off' (click)="flag=false">
+    
+    <div class="list-group searchlist" *ngIf="!flag">
+      <div *ngFor="let elem of currencynames|autocomplete:searchtext">
+        <a class="list-group-item search " (click)="itemClicked(elem)" >{{elem}}</a>
+      </div>
+    </div>
+  </form>
+</nav>

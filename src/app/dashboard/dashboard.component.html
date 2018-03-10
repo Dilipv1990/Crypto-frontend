@@ -1,0 +1,25 @@
+<!-- <h3></h3> -->
+<div  class="container" ><div class="row col-xs-12"><div *ngFor="let currency of currencies" class="col-sm-4 col-xs-12">
+<div class="card" style="margin-top:12px;">
+  <!-- {{currency}} -->
+  <div class="card-body">
+    <!--Title-->
+    <h4 class="card-title">{{currencySymbols[currency.symbol]}}</h4>
+    <hr>
+    <!--Text-->
+    <p class="card-text">{{"Transaction Volume : "+(currency.txVolume?currency.txVolume:"Not Available")}}</p>
+    <p class="card-text">{{"Transaction Count : "+(currency.txCount?currency.txCount:"Not Available")}}</p>
+    <p class="card-text">{{"Market Capital : "+(currency.marketcap?currency.marketcap:"Not Available")}}</p>
+    <p class="card-text">{{"Price : "+(currency.price?currency.price:"Not Available")}}</p>
+    <p class="card-text">{{"Exchange Volume : "+(currency.exchangeVolume?currency.exchangeVolume:"Not Available")}}</p>
+    <p class="card-text">{{"Generated Coins : "+(currency.generatedCoins?currency.generatedCoins:"Not Available")}}</p>
+    <p class="card-text">{{"Fees : "+(currency.fees?currency.fees:"Not Available")}}</p>
+    <a href="#" class="black-text d-flex flex-row-reverse">
+      <h5 class="waves-effect p-2"><a routerLink="/detail/{{currency.symbol}}">Know more...
+      <i class="fa fa-chevron-right"></i></a>
+      </h5>
+    </a>
+  </div>
+  <!--/.Card content-->
+
+</div></div></div>
